@@ -152,7 +152,6 @@ body nav {
     body nav ul li a {
       color: #032637; }
       body nav ul li a:hover {
-        margin-left: -50px;
         color: #d0b502;
         font-family: "MinionPro-Regular", "sans-serif", "Arial";
         font-weight: 400; }
@@ -164,8 +163,6 @@ body nav {
       body nav ul li.active a {
         color: #d0b502;
         font-family: "MinionPro-Regular", "sans-serif", "Arial"; }
-        body nav ul li.active a:hover {
-          margin-left: -50px; }
     body nav ul li:last-child {
       margin-bottom: 0; }
 body p {

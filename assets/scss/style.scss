@@ -213,7 +213,6 @@ body {
 					color: $blue;
 					@extend %transition;
 					&:hover {
-						margin-left: -50px;
 						color: $yellow;
 						font-family: $MinionPro;
 						font-weight: 400;
@@ -227,9 +226,6 @@ body {
 					a {
 						color: $yellow;
 						font-family: $MinionPro;
-						&:hover {
-							margin-left: -50px;
-						}
 					}
 				}
 				&:last-child {
