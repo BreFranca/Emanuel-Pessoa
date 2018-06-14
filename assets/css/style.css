@@ -22,7 +22,7 @@
   src: url("../fonts/MinionPro-BoldIt.woff2") format("woff2"), url("../fonts/MinionPro-BoldIt.woff") format("woff"), url("../fonts/MinionPro-BoldIt.ttf") format("truetype"), url("../fonts/MinionPro-BoldIt.svg#MinionPro-BoldIt") format("svg"), url("../fonts/MinionPro-BoldIt.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal; }
-body nav ul li a {
+body #content #left-content, body nav ul li, body nav ul li a {
   transition: .4s all linear; }
 
 * {
@@ -62,7 +62,7 @@ body {
 body::before {
   content: '';
   background: url("../img/image2.jpg") center center no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   position: absolute;
   top: 0;
   right: 0;
@@ -77,9 +77,14 @@ body #content {
     height: 100%; }
   body #content #left-content {
     width: 40%;
-    background: #032637; }
+    background: #032637;
+    opacity: 0;
+    visibiliy: hidden; }
   body #content #right-content {
     width: 60%; }
+  body #content.open #left-content {
+    opacity: 1;
+    visibility: visible; }
 body .overflow {
   overflow: scroll;
   max-height: 100%;
@@ -93,7 +98,8 @@ body .content {
   max-width: 440px;
   height: 60%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  display: none; }
 body h1 {
   padding-top: 245px;
   font-size: 107px;
@@ -103,8 +109,15 @@ body h1 {
   text-transform: uppercase;
   margin-bottom: 70px;
   margin-left: 24px; }
+  @media (max-width: 1620px) {
+    body h1 {
+      font-size: 85px;
+      padding-top: 180px; } }
 body nav {
   margin-left: 45px; }
+  @media (max-width: 1620px) {
+    body nav {
+      margin-left: 120px; } }
   body nav ul li {
     font-family: "MinionPro-BoldIt", "sans-serif", "Arial";
     font-size: 30px;

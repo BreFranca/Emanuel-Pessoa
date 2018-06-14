@@ -104,7 +104,7 @@ body {
 	&::before {
 		content: '';
 		background: url('../img/image2.jpg') center center no-repeat;
-		background-size: 100% auto;
+		background-size: cover;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -122,9 +122,18 @@ body {
 		#left-content {
 			width: 40%;
 			background: $blue;
+			opacity: 0;
+			visibiliy: hidden;
+			@extend %transition;
 		}
 		#right-content {
 			width: 60%;
+		}
+		&.open {
+			#left-content {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 	.overflow {
@@ -143,6 +152,7 @@ body {
 		height: 60%;
 		margin-left: auto;
 		margin-right: auto;
+		display: none;
 	}
 	h1 {
 		padding-top: 245px;
@@ -153,15 +163,23 @@ body {
 		text-transform: uppercase;
 		margin-bottom: 70px;
 		margin-left: 24px;
+		@media(max-width: 1620px) {
+			font-size: 85px;
+			padding-top: 180px;
+		}
 	}
 	nav {
 		margin-left: 45px;
+		@media(max-width: 1620px) {
+			margin-left: 120px;
+		}
 		ul {
 			li {
 				font-family: $MinionPro-Bold;
 				font-size: 30px;
 				display: block;
 				margin-bottom: 30px;
+				@extend %transition;
 				a {
 					color: $blue;
 					@extend %transition;
