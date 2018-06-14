@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.eot');
+  src: url('../fonts/OpenSans-Light.woff2') format('woff2'),
+       url('../fonts/OpenSans-Light.woff') format('woff'),
+       url('../fonts/OpenSans-Light.ttf') format('truetype'),
+       url('../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg'),
+       url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DeValencia-Regular';
+  src: url('../fonts/DeValencia-Regular.eot');
+  src: url('../fonts/DeValencia-Regular.woff2') format('woff2'),
+       url('../fonts/DeValencia-Regular.woff') format('woff'),
+       url('../fonts/DeValencia-Regular.ttf') format('truetype'),
+       url('../fonts/DeValencia-Regular.svg#DeValencia-Regular') format('svg'),
+       url('../fonts/DeValencia-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MinionPro-Regular';
+  src: url('../fonts/MinionPro-Regular.eot');
+  src: url('../fonts/MinionPro-Regular.woff2') format('woff2'),
+       url('../fonts/MinionPro-Regular.woff') format('woff'),
+       url('../fonts/MinionPro-Regular.ttf') format('truetype'),
+       url('../fonts/MinionPro-Regular.svg#MinionPro-Regular') format('svg'),
+       url('../fonts/MinionPro-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MinionPro-BoldIt';
+  src: url('../fonts/MinionPro-BoldIt.eot');
+  src: url('../fonts/MinionPro-BoldIt.woff2') format('woff2'),
+       url('../fonts/MinionPro-BoldIt.woff') format('woff'),
+       url('../fonts/MinionPro-BoldIt.ttf') format('truetype'),
+       url('../fonts/MinionPro-BoldIt.svg#MinionPro-BoldIt') format('svg'),
+       url('../fonts/MinionPro-BoldIt.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$OpenSans: 'OpenSans-Light', 'sans-serif', 'Arial';
+$DeVal: 'DeValencia-Regular', 'sans-serif', 'Arial';
+$MinionPro: 'MinionPro-Regular', 'sans-serif', 'Arial';
+$MinionPro-Bold: 'MinionPro-BoldIt', 'sans-serif', 'Arial';
+
+$blue: #032637;
+$yellow: #d0b502;
+$white: #ffffff;
+
+%transition {
+	transition: .4s all linear;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	border: 1px solid $white;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $yellow; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: transparent;
+}
+::-webkit-scrollbar-track:horizontal {
+    display: none;
+}
+
+body {
+	&::before {
+		content: '';
+		background: url('../img/image2.jpg') center center no-repeat;
+		background-size: 100% auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	#content {
+		position: relative;
+		z-index: 1;
+		height: 100%;
+		display: flex;
+		#left-content, #right-content {
+			height: 100%;
+		}
+		#left-content {
+			width: 40%;
+			background: $blue;
+		}
+		#right-content {
+			width: 60%;
+		}
+	}
+	.overflow {
+		overflow: scroll;
+		max-height: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.header-image {
+		background: url('../img/left-image.png') center center no-repeat;
+		width: 100%;
+		height: 336px;
+	}
+	.content {
+		max-width: 440px;
+		height: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h1 {
+		padding-top: 245px;
+		font-size: 107px;
+		color: $blue;
+		font-family: $DeVal;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: 70px;
+		margin-left: 24px;
+	}
+	nav {
+		margin-left: 45px;
+		ul {
+			li {
+				font-family: $MinionPro-Bold;
+				font-size: 30px;
+				display: block;
+				margin-bottom: 30px;
+				a {
+					color: $blue;
+					@extend %transition;
+					&:hover {
+						margin-left: -50px;
+						color: $yellow;
+						font-family: $MinionPro;
+						font-weight: 400;
+					}
+				}
+				&.active {
+					margin-left: -150px;
+					a {
+						color: $yellow;
+						font-family: $MinionPro;
+						&:hover {
+							margin-left: -50px;
+						}
+					}
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	p {
+		font-family: $OpenSans;
+		font-size: 14px;
+		color: $white;
+		padding-bottom: 20px;
+	}
+}

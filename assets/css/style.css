@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/OpenSans-Light.eot");
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype"), url("../fonts/OpenSans-Light.svg#OpenSans-Light") format("svg"), url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'DeValencia-Regular';
+  src: url("../fonts/DeValencia-Regular.eot");
+  src: url("../fonts/DeValencia-Regular.woff2") format("woff2"), url("../fonts/DeValencia-Regular.woff") format("woff"), url("../fonts/DeValencia-Regular.ttf") format("truetype"), url("../fonts/DeValencia-Regular.svg#DeValencia-Regular") format("svg"), url("../fonts/DeValencia-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'MinionPro-Regular';
+  src: url("../fonts/MinionPro-Regular.eot");
+  src: url("../fonts/MinionPro-Regular.woff2") format("woff2"), url("../fonts/MinionPro-Regular.woff") format("woff"), url("../fonts/MinionPro-Regular.ttf") format("truetype"), url("../fonts/MinionPro-Regular.svg#MinionPro-Regular") format("svg"), url("../fonts/MinionPro-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'MinionPro-BoldIt';
+  src: url("../fonts/MinionPro-BoldIt.eot");
+  src: url("../fonts/MinionPro-BoldIt.woff2") format("woff2"), url("../fonts/MinionPro-BoldIt.woff") format("woff"), url("../fonts/MinionPro-BoldIt.ttf") format("truetype"), url("../fonts/MinionPro-BoldIt.svg#MinionPro-BoldIt") format("svg"), url("../fonts/MinionPro-BoldIt.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+body nav ul li a {
+  transition: .4s all linear; }
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none; }
+
+html,
+body {
+  height: 100%; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  display: none; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 1px solid #ffffff;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d0b502;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent; }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: transparent; }
+
+::-webkit-scrollbar-track:horizontal {
+  display: none; }
+
+body::before {
+  content: '';
+  background: url("../img/image2.jpg") center center no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+body #content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex; }
+  body #content #left-content, body #content #right-content {
+    height: 100%; }
+  body #content #left-content {
+    width: 40%;
+    background: #032637; }
+  body #content #right-content {
+    width: 60%; }
+body .overflow {
+  overflow: scroll;
+  max-height: 100%;
+  padding-right: 15px;
+  padding-left: 15px; }
+body .header-image {
+  background: url("../img/left-image.png") center center no-repeat;
+  width: 100%;
+  height: 336px; }
+body .content {
+  max-width: 440px;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto; }
+body h1 {
+  padding-top: 245px;
+  font-size: 107px;
+  color: #032637;
+  font-family: "DeValencia-Regular", "sans-serif", "Arial";
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  margin-left: 24px; }
+body nav {
+  margin-left: 45px; }
+  body nav ul li {
+    font-family: "MinionPro-BoldIt", "sans-serif", "Arial";
+    font-size: 30px;
+    display: block;
+    margin-bottom: 30px; }
+    body nav ul li a {
+      color: #032637; }
+      body nav ul li a:hover {
+        margin-left: -50px;
+        color: #d0b502;
+        font-family: "MinionPro-Regular", "sans-serif", "Arial";
+        font-weight: 400; }
+    body nav ul li.active {
+      margin-left: -150px; }
+      body nav ul li.active a {
+        color: #d0b502;
+        font-family: "MinionPro-Regular", "sans-serif", "Arial"; }
+        body nav ul li.active a:hover {
+          margin-left: -50px; }
+    body nav ul li:last-child {
+      margin-bottom: 0; }
+body p {
+  font-family: "OpenSans-Light", "sans-serif", "Arial";
+  font-size: 14px;
+  color: #ffffff;
+  padding-bottom: 20px; }
+
+/*# sourceMappingURL=style.css.map */
